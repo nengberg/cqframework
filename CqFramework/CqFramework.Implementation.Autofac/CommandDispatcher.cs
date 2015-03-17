@@ -2,7 +2,7 @@
 using Autofac.Core.Registration;
 
 namespace CqFramework.Implementation.Autofac {
-	public class CommandDispatcher : ICommandDispatcher {
+	internal class CommandDispatcher : ICommandDispatcher {
 		private readonly ILifetimeScope lifetimeScope;
 
 		public CommandDispatcher(ILifetimeScope lifetimeScope) {

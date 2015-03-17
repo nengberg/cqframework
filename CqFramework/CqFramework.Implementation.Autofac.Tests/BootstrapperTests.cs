@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 
 using Autofac;
 
@@ -32,11 +33,8 @@ namespace CqFramework.Implementation.Autofac.Tests {
 					}
 				}
 			}
-			foreach(var unRegisteredType in unRegisteredTypes) {
-				Console.Write(unRegisteredType.FullName);
-				Console.WriteLine();
-			}
-			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} query handlers that is not registered", unRegisteredTypes.Count));
+			var sb = PrintUnregisteredTypes(unRegisteredTypes);
+			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} query handlers that is not registered.\r\n{1}", unRegisteredTypes.Count, sb));
 		}
 
 		[Test]
@@ -59,14 +57,20 @@ namespace CqFramework.Implementation.Autofac.Tests {
 				}
 			}
 
-			foreach(var unRegisteredType in unRegisteredTypes) {
-				Console.Write(unRegisteredType.FullName);
-				Console.WriteLine();
-			}
-			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} command handlers that is not registered", unRegisteredTypes.Count));
+			var sb = PrintUnregisteredTypes(unRegisteredTypes);
+			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} command handlers that is not registered.\r\n{1}", unRegisteredTypes.Count, sb));
 		}
 
-		private bool IsNotTestAssembly(Assembly assembly) {
+		private static StringBuilder PrintUnregisteredTypes(List<Type> unRegisteredTypes) {
+			var sb = new StringBuilder();
+			foreach(var unRegisteredType in unRegisteredTypes) {
+				sb.Append(unRegisteredType.FullName);
+				sb.AppendLine();
+			}
+			return sb;
+		}
+
+		private static bool IsNotTestAssembly(Assembly assembly) {
 			return assembly != Assembly.GetExecutingAssembly();
 		}
 	}
