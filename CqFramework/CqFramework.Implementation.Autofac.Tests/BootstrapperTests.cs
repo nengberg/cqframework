@@ -40,7 +40,31 @@ namespace CqFramework.Implementation.Autofac.Tests {
 		}
 
 		[Test]
-		public void Autofac_CanResolve_AllCommandHandlers() {}
+		public void Autofac_CanResolve_AllCommandHandlers() {
+			var containerBuilder = new ContainerBuilder();
+			Bootstrapping.Configure(containerBuilder);
+			var container = containerBuilder.Build();
+
+			var unRegisteredTypes = new List<Type>();
+
+			foreach(var allAssemblies in AppDomain.CurrentDomain.GetAssemblies().Where(IsNotTestAssembly)) {
+				foreach(var command in allAssemblies.GetTypes().Where(t => t.IsClass && typeof(ICommand).IsAssignableFrom(t))) {
+					var isRegistered = false;
+
+					var handlerType = typeof(ICommandHandler<>).MakeGenericType(command);
+					isRegistered = container.IsRegistered(handlerType);
+					if(!isRegistered) {
+						unRegisteredTypes.Add(handlerType);
+					}
+				}
+			}
+
+			foreach(var unRegisteredType in unRegisteredTypes) {
+				Console.Write(unRegisteredType.FullName);
+				Console.WriteLine();
+			}
+			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} command handlers that is not registered", unRegisteredTypes.Count));
+		}
 
 		private bool IsNotTestAssembly(Assembly assembly) {
 			return assembly != Assembly.GetExecutingAssembly();
