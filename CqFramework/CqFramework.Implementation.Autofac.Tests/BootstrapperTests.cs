@@ -39,6 +39,9 @@ namespace CqFramework.Implementation.Autofac.Tests {
 			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} query handlers that is not registered", unRegisteredTypes.Count));
 		}
 
+		[Test]
+		public void Autofac_CanResolve_AllCommandHandlers() {}
+
 		private bool IsNotTestAssembly(Assembly assembly) {
 			return assembly != Assembly.GetExecutingAssembly();
 		}
