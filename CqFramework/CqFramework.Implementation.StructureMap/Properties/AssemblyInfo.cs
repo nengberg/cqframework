@@ -5,12 +5,14 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CqFramework.Implementation.Structuremap")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("CqFramework.Implementation.StructureMap")]
+[assembly: AssemblyDescription("Simple command and query framework")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CqFramework.Implementation.Structuremap")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyProduct("CqFramework.Implementation.StructureMap")]
+[assembly: AssemblyCopyright("Copyright Anders Lindell ©  2015")]
+[assembly: InternalsVisibleTo("CqFramework.Implementation.StructureMap.Tests")]
+
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
