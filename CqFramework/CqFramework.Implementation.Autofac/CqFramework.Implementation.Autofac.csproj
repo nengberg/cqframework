@@ -44,8 +44,6 @@
   <ItemGroup>
     <Compile Include="CommandDispatcher.cs" />
     <Compile Include="Bootstrapping.cs" />
-    <Compile Include="NoCommandHandlerRegisteredException.cs" />
-    <Compile Include="NoQueryHandlerRegisteredException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryProcessor.cs" />
   </ItemGroup>
