@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqFramework.Implementation.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqFramework.Implementation.StructureMap.Tests", "CqFramework.Implementation.StructureMap.Tests\CqFramework.Implementation.StructureMap.Tests.csproj", "{C5E0D9E4-53AE-43F5-8C72-A6CD2D28FC00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqFramework.Implementation.Unity", "CqFramework.Implementation.Unity\CqFramework.Implementation.Unity.csproj", "{33803129-95FF-4760-B41D-836782A64F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqFramework.Implementation.Unity.Tests", "CqFramework.Implementation.Unity.Tests\CqFramework.Implementation.Unity.Tests.csproj", "{1CA87827-4475-4CF0-B6D4-D573AD627F25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C5E0D9E4-53AE-43F5-8C72-A6CD2D28FC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5E0D9E4-53AE-43F5-8C72-A6CD2D28FC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5E0D9E4-53AE-43F5-8C72-A6CD2D28FC00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33803129-95FF-4760-B41D-836782A64F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33803129-95FF-4760-B41D-836782A64F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33803129-95FF-4760-B41D-836782A64F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33803129-95FF-4760-B41D-836782A64F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA87827-4475-4CF0-B6D4-D573AD627F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA87827-4475-4CF0-B6D4-D573AD627F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA87827-4475-4CF0-B6D4-D573AD627F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA87827-4475-4CF0-B6D4-D573AD627F25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
