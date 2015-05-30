@@ -1,6 +1,6 @@
 using System;
 
-namespace CqFramework.Implementation.Autofac {
+namespace CqFramework {
 	public class NoCommandHandlerRegisteredException : Exception {
 		public NoCommandHandlerRegisteredException(string message) : base(message) {}
 	}
