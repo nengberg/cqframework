@@ -1,34 +1,30 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+
 using StructureMap;
 
-namespace CqFramework.Implementation.StructureMap.Tests
-{
-    [TestFixture]
-    public class BootstrapperTests
-    {
-        [Test]
-        public void Structuremap_CanResolve_QueryProcessor()
-        {
-            var container = new Container();
+namespace CqFramework.Implementation.StructureMap.Tests {
+	[TestFixture]
+	public class BootstrapperTests {
+		[Test]
+		public void StructureMap_CanResolve_QueryProcessor() {
+			var container = new Container();
 
-            Bootstrapping.Configure(container);
+			Bootstrapping.Configure(container);
 
-            var queryProcessor = container.GetInstance<IQueryProcessor>();
+			var queryProcessor = container.GetInstance<IQueryProcessor>();
 
-            Assert.IsInstanceOf<QueryProcessor>(queryProcessor);
-        }
+			Assert.IsInstanceOf<QueryProcessor>(queryProcessor);
+		}
 
-        [Test]
-        public void Structuremap_CanResolve_CommandDispatcher()
-        {
-            var container = new Container();
+		[Test]
+		public void StructureMap_CanResolve_CommandDispatcher() {
+			var container = new Container();
 
-            Bootstrapping.Configure(container);
+			Bootstrapping.Configure(container);
 
-            var commandDispatcher = container.GetInstance<ICommandDispatcher>();
+			var commandDispatcher = container.GetInstance<ICommandDispatcher>();
 
-            Assert.IsInstanceOf<CommandDispatcher>(commandDispatcher);
-        }
-    }
+			Assert.IsInstanceOf<CommandDispatcher>(commandDispatcher);
+		}
+	}
 }

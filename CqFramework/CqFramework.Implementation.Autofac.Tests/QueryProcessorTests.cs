@@ -42,7 +42,8 @@ namespace CqFramework.Implementation.Autofac.Tests {
 			request.ShouldThrow<NoQueryHandlerRegisteredException>();
 		}
 
-		private IQueryHandler<TQuery, TResponse> SetUpAndRegisterHandler<TQuery, TResponse>(TQuery query) where TQuery : IQuery<TResponse> {
+		private IQueryHandler<TQuery, TResponse> SetUpAndRegisterHandler<TQuery, TResponse>(TQuery query)
+			where TQuery : IQuery<TResponse> {
 			var handler = A.Fake<IQueryHandler<TQuery, TResponse>>();
 			this.builder.Register(qh => handler).As<IQueryHandler<TQuery, TResponse>>();
 			var container = this.builder.Build();

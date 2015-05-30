@@ -34,7 +34,8 @@ namespace CqFramework.Implementation.Autofac.Tests {
 				}
 			}
 			var sb = PrintUnregisteredTypes(unRegisteredTypes);
-			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} query handlers that is not registered.\r\n{1}", unRegisteredTypes.Count, sb));
+			Assert.IsTrue(!unRegisteredTypes.Any(), 
+				string.Format("There are {0} query handlers that is not registered.\r\n{1}", unRegisteredTypes.Count, sb));
 		}
 
 		[Test]
@@ -58,7 +59,8 @@ namespace CqFramework.Implementation.Autofac.Tests {
 			}
 
 			var sb = PrintUnregisteredTypes(unRegisteredTypes);
-			Assert.IsTrue(!unRegisteredTypes.Any(), string.Format("There are {0} command handlers that is not registered.\r\n{1}", unRegisteredTypes.Count, sb));
+			Assert.IsTrue(!unRegisteredTypes.Any(), 
+				string.Format("There are {0} command handlers that is not registered.\r\n{1}", unRegisteredTypes.Count, sb));
 		}
 
 		private static StringBuilder PrintUnregisteredTypes(List<Type> unRegisteredTypes) {
