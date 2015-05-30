@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CqFramework.Implementation.StructureMap.Tests")]
+[assembly: AssemblyTitle("CqFramework.Implementation.Autofac.Tests")]
 [assembly: AssemblyDescription("Simple command and query framework")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CqFramework.Implementation.StructureMap.Tests")]
-[assembly: AssemblyCopyright("Copyright Anders Lindell ©  2015")]
+[assembly: AssemblyProduct("CqFramework.Implementation.Autofac.Tests")]
+[assembly: AssemblyCopyright("Copyright Niklas Engberg ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 // Setting ComVisible to false makes the types in this assembly not visible 
